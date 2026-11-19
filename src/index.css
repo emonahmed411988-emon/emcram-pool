@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wood-light: #b68454;
+  --wood-mid: #8b562e;
+  --wood-dark: #4f2811;
+  --wood-deep: #321608;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Fredoka', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #120806;
+  touch-action: manipulation;
+}
+
+.font-script {
+  font-family: 'Lobster', 'Fredoka', cursive, sans-serif;
+}
+
+/* Crisp mobile game outline text shadow */
+.text-stroke-sm {
+  text-shadow:
+    0 1.5px 0 rgba(0, 0, 0, 0.85),
+    0 -1px 0 rgba(0, 0, 0, 0.45),
+    1px 0 0 rgba(0, 0, 0, 0.55),
+    -1px 0 0 rgba(0, 0, 0, 0.55);
+}
+
+.text-stroke-md {
+  text-shadow:
+    0 2.5px 0 rgba(0, 0, 0, 0.85),
+    0 -1px 0 rgba(0, 0, 0, 0.55),
+    1.5px 0 0 rgba(0, 0, 0, 0.65),
+    -1.5px 0 0 rgba(0, 0, 0, 0.65),
+    0 4px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Authentic Wood Header & Bottom Bar Texture */
+.wood-bar {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 220, 175, 0.04) 0px,
+      rgba(255, 220, 175, 0.04) 6px,
+      rgba(40, 15, 0, 0.05) 6px,
+      rgba(40, 15, 0, 0.05) 14px
+    ),
+    linear-gradient(180deg, #b8885e 0%, #986740 52%, #7d4e2b 100%);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 232, 200, 0.4),
+    inset 0 -3px 0 rgba(45, 20, 5, 0.75),
+    0 4px 12px rgba(0, 0, 0, 0.55);
+}
+
+.wood-panel {
+  background:
+    linear-gradient(180deg, #9c5a2d 0%, #7d411c 55%, #653112 100%);
+  border: 2px solid #b87442;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 214, 170, 0.35),
+    inset 0 -4px 0 rgba(48, 18, 4, 0.75),
+    0 8px 24px rgba(0, 0, 0, 0.65);
+}
+
+.wood-recessed {
+  background: linear-gradient(180deg, #4b230d 0%, #633115 100%);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.65),
+    0 1px 0 rgba(255, 200, 150, 0.25);
+}
+
+/* Tactile 3D Glossy Mobile Buttons */
+.btn-green {
+  background: linear-gradient(180deg, #65e83a 0%, #38b81a 52%, #248a0e 100%);
+  border: 1.5px solid #96ff6e;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    0 4px 0 #165e07,
+    0 6px 12px rgba(0, 0, 0, 0.45);
+}
+.btn-green:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.35),
+    0 2px 0 #165e07,
+    0 3px 6px rgba(0, 0, 0, 0.45);
+}
+
+.btn-gold {
+  background: linear-gradient(180deg, #ffd84a 0%, #f5a616 52%, #c97206 100%);
+  border: 1.5px solid #fff099;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.55),
+    0 4px 0 #8a4a03,
+    0 6px 12px rgba(0, 0, 0, 0.45);
+}
+.btn-gold:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    0 2px 0 #8a4a03;
+}
+
+.btn-orange {
+  background: linear-gradient(180deg, #e3873b 0%, #bc5d1a 55%, #8f3e0c 100%);
+  border: 1.5px solid #f4b376;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 232, 196, 0.45),
+    0 3px 0 #572304,
+    0 5px 10px rgba(0, 0, 0, 0.45);
+}
+.btn-orange:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #572304;
+}
+
+.btn-blue {
+  background: linear-gradient(180deg, #3da5ff 0%, #1673db 55%, #0c4ea3 100%);
+  border: 1.5px solid #8fd1ff;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.45),
+    0 3.5px 0 #073370,
+    0 5px 10px rgba(0, 0, 0, 0.45);
+}
+.btn-blue:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #073370;
+}
+
+.btn-crimson-bg {
+  background: radial-gradient(ellipse at 50% 35%, #99241b 0%, #5e110c 60%, #340805 100%);
+}
+
+/* Custom thin scrollbars inside lists */
+.game-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.game-scroll::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+}
+.game-scroll::-webkit-scrollbar-thumb {
+  background: rgba(217, 146, 82, 0.65);
+  border-radius: 999px;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(250, 204, 21, 0.45); }
+  50% { box-shadow: 0 0 22px rgba(250, 204, 21, 0.9); }
+}
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.86); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-float {
+  animation: floatSlow 2.6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 1.8s ease-in-out infinite;
+}
+
+.animate-pop {
+  animation: popIn 0.22s cubic-bezier(0.18, 0.89, 0.32, 1.28) both;
+}
